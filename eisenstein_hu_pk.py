@@ -169,8 +169,6 @@ def execute(block, config):
     D_0 = interpolation(0)
     PK[0,:] = PK[0,:]*D_0**2
 
-    print(PK[0,:])
-
     for i, z_h in enumerate(z_eval[1:]):
         PK[i+1,:] = PK[0,:]*(interpolation(z_h) / D_0)**2
 
